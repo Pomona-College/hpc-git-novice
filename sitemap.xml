@@ -52,7 +52,13 @@
     <loc>https://pomona-college.github.io/hpc-git-novice/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://pomona-college.github.io/hpc-git-novice/aio.html</loc>
+  </url>
+  <url>
     <loc>https://pomona-college.github.io/hpc-git-novice/discuss.html</loc>
+  </url>
+  <url>
+    <loc>https://pomona-college.github.io/hpc-git-novice/images.html</loc>
   </url>
   <url>
     <loc>https://pomona-college.github.io/hpc-git-novice/index.html</loc>
@@ -109,16 +115,34 @@
     <loc>https://pomona-college.github.io/hpc-git-novice/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://pomona-college.github.io/hpc-git-novice/instructor/aio.html</loc>
+  </url>
+  <url>
     <loc>https://pomona-college.github.io/hpc-git-novice/instructor/discuss.html</loc>
   </url>
   <url>
+    <loc>https://pomona-college.github.io/hpc-git-novice/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://pomona-college.github.io/hpc-git-novice/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://pomona-college.github.io/hpc-git-novice/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://pomona-college.github.io/hpc-git-novice/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://pomona-college.github.io/hpc-git-novice/instructor/profiles.html</loc>
   </url>
   <url>
     <loc>https://pomona-college.github.io/hpc-git-novice/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://pomona-college.github.io/hpc-git-novice/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://pomona-college.github.io/hpc-git-novice/key-points.html</loc>
   </url>
   <url>
     <loc>https://pomona-college.github.io/hpc-git-novice/profiles.html</loc>
