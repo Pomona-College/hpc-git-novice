@@ -12,6 +12,7 @@ carpentry: 'incubator'
 
 # Overall title for pages.
 title: 'Version Control with Git — Pomona College HPC Workshop Series'
+description: 'Version control with Git for research code, from first commit to collaborating on GitHub. Adapted from Software Carpentry for Pomona College.'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: '2014-12-04'
