@@ -14,7 +14,7 @@
 [github-collaboration]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests "Collaborating with Pull Requests"
 [license-reference]: https://choosealicense.com "Choose a License"
 [opensource-guide]: https://opensource.guide "Open Source Guides"
-[sagehen-wiki]: https://github.com/pomona-college-hpc "Sagehen HPC Workshop Series on GitHub"
+[sagehen-wiki]: https://github.com/Pomona-College "Sagehen HPC Workshop Series on GitHub"
 [ondemand-portal]: https://ondemand.hpc.pomona.edu "OnDemand HPC Portal"
 [its-contact]: mailto:its-hpc@pomona.edu "HPC Support Email"
 [pomona-its]: https://www.pomona.edu/its/ "Pomona College ITS"
