@@ -67,7 +67,7 @@ Make sure to navigate to the `Desktop` folder first.
 
 ![](fig/github-collaboration.svg){alt='After Creating Clone of Repository'}
 
-The Collaborator can now make a change in her clone of the Owner's repository,
+The Collaborator can now make a change in their clone of the Owner's repository,
 exactly the same way as we've been doing before:
 
 ```bash
@@ -135,6 +135,7 @@ and not something intrinsic to the remote repository.
 
 The `git remote` family of commands is used to set up and alter the remotes
 associated with a repository. Here are some of the most useful ones:
+
 - `git remote -v` lists all the remotes that are configured (we already used
   this in the last episode)
 - `git remote add [name] [url]` is used to add a new remote
@@ -182,6 +183,7 @@ GitHub) are back in sync.
 In practice, it is good to be sure that you have an updated version of the
 repository you are collaborating on, so you should `git pull` before making
 our changes. The basic collaborative workflow would be:
+
 - update your local repo with `git pull origin main`,
 - make your changes and stage them with `git add`,
 - commit your changes with `git commit -m`, and

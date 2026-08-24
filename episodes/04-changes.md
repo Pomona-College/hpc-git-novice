@@ -555,7 +555,9 @@ Two important facts you should know about directories in Git.
   in otherwise empty directories. Unlike `.gitignore`, these files are not special
   and their sole purpose is to populate a directory so that Git adds it to
   the repository. In fact, you can name such files anything you like.
-2. If you create a directory in your Git repository and populate it with files,
+  
+  
+  If you create a directory in your Git repository and populate it with files,
   you can add all files in the directory at once by:
   
   ```bash
@@ -577,6 +579,8 @@ Two important facts you should know about directories in Git.
   $ git commit -m "Add some initial thoughts on spaceships"
   ```
 
+![Adding a whole directory: `git add spaceships` stages both files inside it for a single commit.](fig/04-changes-add-directory.png){alt='Terminal session in the planets repository. Two files are created inside spaceships with touch; git status lists only the untracked directory. After git add spaceships, git status shows both files staged as new files, and the commit reports two files changed.'}
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 To recap, when we want to add changes to our repository,
@@ -592,6 +596,7 @@ repository (`git commit`):
 
 Which of the following commit messages would be most appropriate for the
 last commit made to `mars.txt`?
+
 1. "Changes"
 2. "Added line 'But the Mummy will appreciate the lack of humidity' to mars.txt"
 3. "Discuss effects of Mars' climate on the Mummy"
@@ -616,18 +621,27 @@ but answer 3 is good: short, descriptive, and imperative.
 
 Which command(s) below would save the changes of `myfile.txt`
 to my local Git repository?
-1. ```bash
+
+1. 
+
+```bash
   $ git commit -m "my recent changes"
   ```
-2. ```bash
+2. 
+
+```bash
   $ git init myfile.txt
   $ git commit -m "my recent changes"
   ```
-3. ```bash
+3. 
+
+```bash
   $ git add myfile.txt
   $ git commit -m "my recent changes"
   ```
-4. ```bash
+4. 
+
+```bash
   $ git commit -m myfile.txt "my recent changes"
   ```
 
@@ -652,6 +666,7 @@ to my local Git repository?
 
 The staging area can hold changes from any number of files
 that you want to commit as a single snapshot.
+
 1. Add some text to `mars.txt` noting your decision
   to consider Venus as a base
 2. Create a new file `venus.txt` with your initial thoughts
@@ -765,6 +780,8 @@ between its updated state and its original state, use `git diff`:
 ```bash
 $ git diff me.txt
 ```
+
+![The full `bio` walkthrough — including the instructive `fatal: pathspec` error from adding a file before it exists.](fig/04-changes-bio-repo-solution.png){alt='Terminal session creating a new bio repository. git init initializes it; an early git add me.txt fails because the file does not exist yet. After creating and committing me.txt, the file is edited again and git diff shows one modified line and three added lines.'}
 
 :::::::::::::::::::::::::
 

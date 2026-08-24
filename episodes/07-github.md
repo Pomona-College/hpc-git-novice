@@ -244,7 +244,13 @@ drwxr-xr-x 1 Cecil Sagehen 197121   0 Jul 16 14:48 ../
 
 ### 3\.2 Copy the public key to GitHub
 
-Now we have a SSH key pair and we can run this command to check if GitHub can read our authentication.
+Now we have a SSH key pair. 
+
+id_ed25519 — private key, stays only on your computer.
+
+id_ed25519.pub — public key, this is the one added to GitHub.
+
+Let's run this command to check if GitHub can read our authentication.
 
 ```bash
 ssh -T git@github.com
@@ -281,11 +287,15 @@ Now that we've set that up, let's check our authentication again from the comman
 
 ```bash
 $ ssh -T git@github.com
+Enter passphrase for key '/c/Users/Cecil/.ssh/id_ed25519':
+
 ```
 
 ```output
 Hi Cecil! You've successfully authenticated, but GitHub does not provide shell access.
 ```
+
+![SSH setup end to end: denied before the key is on GitHub, successful after — then `git push` asks for the key passphrase.](fig/07-github-ssh-auth-check.png){alt='Terminal session verifying SSH access to GitHub. Listing the .ssh directory shows an ed25519 key pair. The first ssh -T attempt asks to confirm the host fingerprint and ends with Permission denied publickey. After the public key is added to GitHub, a second ssh -T prompts for the key passphrase and prints a successful authentication message, and git push begins by asking for the same passphrase.'}
 
 Good! This output confirms that the SSH key works as intended. We are now ready to push our work to the remote repository.
 
@@ -399,32 +409,24 @@ GitHub, though, this command would download them to our local repository.
 
 ## GitHub GUI
 
-Browse to your `planets` repository on GitHub.
-Under the Code tab, find and click on the text that says "XX commits" (where "XX" is some number).
-Hover over, and click on, the three buttons to the right of each commit.
-What information can you gather/explore from these buttons?
-How would you get that same information in the shell?
+Browse to your `planets` repository on GitHub and find the commit history. Open one of your commits and look at what GitHub shows you about it.
+
+1. What information can you find there?
+2. How would you get that same information in the shell?
 
 :::::::::::::::  solution
 
 ## Solution
 
-The left-most button (with the picture of a clipboard) copies the full identifier of the commit
-to the clipboard. In the shell, `git log` will show you the full commit identifier for each
-commit.
+![A commit's page on GitHub: message, author, branch, full hash, parent link, and the line-by-line diff — the web view of `git log` + `git show`.](fig/07-github-commit-detail-page.png){alt='GitHub commit detail page for a repository named planets. The header shows the commit message Ignore data files and the results folder, the main branch badge, the parent commit link, and the abbreviated hash. Below, a diff of .gitignore highlights two added lines in green.'}
 
-When you click on the middle button, you'll see all of the changes that were made in that
-particular commit. Green shaded lines indicate additions and red ones removals. In the shell we
-can do the same thing with `git diff`. In particular, `git diff ID1..ID2` where ID1 and
-ID2 are commit identifiers (e.g. `git diff a3bf1e5..041e637`) will show the differences
-between those two commits.
+GitHub shows the commit message, author, date, full commit identifier (hash), and a line-by-line diff of the changes — green for additions, red for removals. You can also browse the state of every file in the repository as of that commit.
 
-The right-most button lets you view all of the files in the repository at the time of that
-commit. To do this in the shell, we'd need to checkout the repository at that particular time.
-We can do this with `git checkout ID` where ID is the identifier of the commit we want to
-look at. If we do this, we need to remember to put the repository back to the right state
-afterwards!
+The shell equivalents:
 
+- `git log` shows the message, author, date, and full identifier for each commit.
+- `git diff ID1..ID2` shows what changed between two commits (e.g. `git diff a3bf1e5..041e637`). `git show ID` shows the changes in a single commit.
+- `git checkout ID` puts the repository back to the state it was in at that commit — remember to return to your branch afterwards with `git checkout main`.
 
 
 :::::::::::::::::::::::::

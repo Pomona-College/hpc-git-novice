@@ -343,6 +343,7 @@ modifications she made this morning "broke" the script and it no longer runs. Sh
 Luckily, she has been keeping track of her project's versions using Git! Which commands below will
 let her recover the last committed version of her Python script called
 `data_cruncher.py`?
+
 1. `$ git checkout HEAD`
 2. `$ git checkout HEAD data_cruncher.py`
 3. `$ git checkout HEAD~1 data_cruncher.py`
@@ -353,7 +354,7 @@ let her recover the last committed version of her Python script called
 
 ## Solution
 
-The answer is (5)-Both 2 and 4.
+The answer is (5) - Both 2 and 4.
 
 The `checkout` command restores files from the repository, overwriting the files in your working
 directory. Answers 2 and 4 both restore the *latest* version *in the repository* of the file
@@ -393,6 +394,7 @@ reverses changes committed to the local and project repositories.
 
 Below are the right steps and explanations for Jennifer to use `git revert`,
 what is the missing command?
+
 1. `________ # Look at the git history of the project to find the commit ID`
 2. Copy the ID (the first few characters of the ID, e.g. 0b1d055).
 3. `git revert [commit ID]`
@@ -410,6 +412,8 @@ the commit ID; however, Jennifer should double-check it is the correct commit, a
 else has committed changes to the repository.
 
 
+
+![`git revert <id>` creates a new commit that undoes the reverted one — both spaceship files deleted, history preserved.](fig/05-history-git-revert.png){alt='Terminal session demonstrating git revert. An initial git log shows two commits. Running git revert on the spaceships commit opens the editor for the revert message and reports a new commit deleting both spaceship files. A second git log shows the Revert commit at the top with the originals still below it.'}
 
 :::::::::::::::::::::::::
 
@@ -431,17 +435,25 @@ $ git checkout HEAD venus.txt
 $ cat venus.txt #this will print the contents of venus.txt to the screen
 ```
 
-1. ```output
+1. 
+
+```output
   Venus is too hot to be suitable as a base
   ```
-2. ```output
+2. 
+
+```output
   Venus is beautiful and full of love
   ```
-3. ```output
+3. 
+
+```output
   Venus is beautiful and full of love
   Venus is too hot to be suitable as a base
   ```
-4. ```output
+4. 
+
+```output
   Error because you have changed venus.txt without committing the changes
   ```
 
@@ -500,13 +512,13 @@ then use `git checkout` to see if you can remove your change.
 
 ## Solution
 
-After adding a change, `git checkout` can not be used directly.
+After adding a change, `git checkout` alone will not undo it.
 Let's look at the output of `git status`:
 
 ```output
 On branch main
 Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
+  (use "git restore --staged <file>..." to unstage)
 
         modified:   mars.txt
 
@@ -516,19 +528,26 @@ Note that if you don't have the same output
 you may either have forgotten to change the file,
 or you have added it *and* committed it.
 
-Using the command `git checkout -- mars.txt` now does not give an error,
-but it does not restore the file either.
-Git helpfully tells us that we need to use `git reset` first
-to unstage the file:
-
-```bash
-$ git reset HEAD mars.txt
-```
+Running `git checkout mars.txt` now produces no error -- but it does not
+restore the file either. Git reports:
 
 ```output
-Unstaged changes after reset:
-M	mars.txt
+Updated 0 paths from the index
 ```
+
+That is because `git checkout` restores the file from the *staging area*
+(the index), and the staged copy already contains our change -- so nothing
+visibly happens. This makes staged changes easy to miss!
+
+To discard the change, we first unstage it, exactly as the hint in the
+`git status` output above suggests:
+
+```bash
+$ git restore --staged mars.txt
+```
+
+(On older versions of Git, the equivalent command is `git reset HEAD mars.txt`,
+and the `git status` hint will name that instead.)
 
 Now, `git status` gives us:
 
@@ -540,14 +559,15 @@ $ git status
 On branch main
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
+  (use "git restore <file>..." to discard changes in working directory)
 
         modified:   mars.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-This means we can now use `git checkout` to restore the file
+The change is back in the working directory only, so now we can use
+`git checkout` (or, on modern Git, `git restore mars.txt`) to restore the file
 to the previous commit:
 
 ```bash
@@ -602,6 +622,8 @@ Question: What does the following command do?
 ```bash
 $ git log --patch HEAD~9 *.txt
 ```
+
+![In a repository with fewer than ten commits, `HEAD~9` fails with "ambiguous argument", and Git hints at using `--` to separate paths from revisions.](fig/05-history-log-patch-head9.png){alt='Terminal output where git log patch HEAD tilde 9 star dot txt fails with a fatal ambiguous argument error because the repository has too few commits, and Git suggests using a double dash to separate paths from revisions.'}
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 

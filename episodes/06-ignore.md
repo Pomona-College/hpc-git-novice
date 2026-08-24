@@ -93,6 +93,8 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
+![The whole flow: dummy files created, `.gitignore` written, and `git status` now showing only the `.gitignore` itself.](fig/06-ignore-gitignore-status.png){alt='Terminal session in the planets repository. Dummy dat files and a results directory are created and git status lists them all as untracked. A .gitignore containing star dot dat and results slash is created with nano, and a second git status shows only .gitignore as untracked.'}
+
 The only thing Git notices now is the newly-created `.gitignore` file.
 You might think we wouldn't want to track it,
 but everyone we're sharing our repository with will probably want to ignore
@@ -351,18 +353,20 @@ none of them will be ignored, and all `.dat` files will be tracked.
 
 You wrote a script that creates many intermediate log-files of the form `log_01`, `log_02`, `log_03`, etc.
 You want to keep them but you do not want to track them through `git`.
-1. Write **one** `.gitignore` entry that excludes files of the form `log_01`, `log_02`, etc.
-2. Test your "ignore pattern" by creating some dummy files of the form `log_01`, etc.
-3. You find that the file `log_01` is very important after all, add it to the tracked files without changing the `.gitignore` again.
-4. Discuss with your neighbor what other types of files could reside in your directory that you do not want to track and thus would exclude via `.gitignore`.
+
+1. Create a few dummy files to work with: touch `log_01` `log_02` `log_03` etc. How would you write **one** `.gitignore` entry that excludes all files of the form `log_01` `log_02` `log_03` ? Check that it worked — `git status` should not list the log files.
+
+2. You find that the file `log_01` is very important after all. How would you add it to the tracked files without editing the `.gitignore` again?
+
+3. What other types of files could sit in your directory that you do not want to track and thus would exclude via `.gitignore`?
 
 :::::::::::::::  solution
 
 ## Solution
 
-1. append either `log_*`  or  `log*`  as a new entry in your .gitignore
+1. append either `log_*`  as a new entry in your .gitignore
 2. track `log_01` using   `git add -f log_01`
-  
+3. Passwords, other credentials, API keys, large data files, etc.
   
 
 :::::::::::::::::::::::::

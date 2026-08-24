@@ -81,7 +81,7 @@ to accept the Xcode license if you are using macOS.
 Next, RStudio will ask which existing directory we want to use. Click
 "Browse..." and navigate to the correct directory, then click "Create Project":
 
-![](fig/RStudio_screenshot_navigateexisting.png)
+![](fig/RStudio_screenshot_navigateexisting.png){alt='RStudio New Project dialog with the Browse button used to navigate to the existing planets directory'}
 
 Ta-da! We have created a new project in RStudio within the existing planets
 repository. Notice the vertical "Git" menu in the menu bar. RStudio has
@@ -94,7 +94,7 @@ To edit the existing files in the repository, we can click on them in the
 "Files" panel on the lower right. Now let's add some additional information
 about Pluto:
 
-![](fig/RStudio_screenshot_editfiles.png)
+![](fig/RStudio_screenshot_editfiles.png){alt='RStudio editor pane with a file from the repository open for editing, and the Git pane showing the modified file'}
 
 Once we have saved our edited files, we can use RStudio to commit the changes
 by clicking on "Commit..." in the Git menu:
@@ -108,7 +108,7 @@ the current status of each file. Clicking on a file shows information about
 changes in the lower panel (using output of `git diff`). Once everything is the
 way we want it, we click "Commit":
 
-![](fig/RStudio_screenshot_review.png)
+![](fig/RStudio_screenshot_review.png){alt='RStudio Review Changes window showing staged files, a commit message box, and a diff of the changes highlighted in green and red'}
 
 The changes can be pushed by selecting "Push Branch" from the Git menu. There
 are also options to pull from the remote repository, and to view the commit
@@ -130,7 +130,7 @@ terminal to the repository and enter the command: `git push -u origin main`. The
 If we click on "History", we can see a graphical version of what `git log`
 would tell us:
 
-![](fig/RStudio_screenshot_viewhistory.png)
+![](fig/RStudio_screenshot_viewhistory.png){alt='RStudio history window listing past commits with their messages, authors, dates, and SHA identifiers'}
 
 RStudio creates a number of files that it uses to keep track of a project. We
 often don't want to track these, in which case we add them to our `.gitignore`

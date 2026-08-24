@@ -157,12 +157,15 @@ Let's review those settings and test our `core.editor` right away:
 $ git config --global --edit
 ```
 
+![`git config --global --edit` opens your `.gitconfig` in the configured editor — Notepad here on Windows — while Git waits.](fig/02-setup-config-edit-notepad.png){alt='A Git Bash terminal runs git config global edit and prints a hint that Git is waiting for the editor to close the file. A Notepad window shows the .gitconfig file with user, core, and init sections, including autocrlf false, editor notepad, and defaultBranch main.'}
+
 Let's close the file without making any additional changes.  Remember, since typos in the config file will cause
 issues, it's safer to view the configuration with:
-
 ```bash
 $ git config --list
 ```
+
+![`git config --list` shows every effective setting; later global entries override earlier system defaults — note `init.defaultbranch` appears twice.](fig/02-setup-config-list.png){alt='Terminal output of git config list in Git Bash. The list includes system-level entries such as Git LFS filters and the credential manager, followed by the configured core.autocrlf false, core.editor notepad, and init.defaultbranch main. The variable init.defaultbranch appears twice, once as master and once as main, illustrating override order.'}
 
 And if necessary, change your configuration using the
 same commands to choose another editor or update your email address.

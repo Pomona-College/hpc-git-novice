@@ -318,7 +318,7 @@ Clone the repository created by your instructor.
 Add a new file to it,
 and modify an existing file (your instructor will tell you which one).
 When asked by your instructor,
-pull her changes from the repository to create a conflict,
+pull their changes from the repository to create a conflict,
 then resolve it.
 
 
@@ -490,9 +490,14 @@ no longer exists.
 
 ## A Typical Work Session
 
-You sit down at your computer to work on a shared project that is tracked in a
-remote Git repository. During your work session, you take the following
-actions, but not in this order:
+This is a pencil-and-paper ordering exercise -- you don't need a shared remote
+repository, and you don't need to run any of these commands. Just work out the
+right order.
+
+Imagine you sit down at your computer to work on a shared project that is
+tracked in a remote Git repository. During your work session, you take the
+following actions, but not in this order:
+
 - *Make changes* by appending the number `100` to a text file `numbers.txt`
 - *Update remote* repository to match the local repository
 - *Celebrate* your success with some fancy beverage(s)
@@ -526,7 +531,7 @@ started.
 | 3     | Stage changes              | `git add numbers.txt`                                              | 
 | 4     | Commit changes             | `git commit -m "Add 100 to numbers.txt"`                                              | 
 | 5     | Update remote              | `git push origin main`                                              | 
-| 6     | Celebrate!                 | `AFK`                                              | 
+| 6     | Celebrate!                 | AFK (not a `git` command -- step away from the keyboard!)                                             | 
 
 :::::::::::::::::::::::::
 
