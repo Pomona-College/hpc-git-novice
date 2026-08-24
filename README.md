@@ -1,31 +1,62 @@
-[![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
-[![Slack Status](https://img.shields.io/badge/Slack_Channel-swc--git-E01563.svg)](https://swcarpentry.slack.com/messages/C91JS49HD)
+# Version Control with Git
 
-# git-novice
+*Pomona College HPC Workshop Series*
 
-An introduction to version control for novices using Git.
-Please see [https://swcarpentry.github.io/git-novice/](https://swcarpentry.github.io/git-novice/) for a rendered version of this material,
-[the lesson template documentation][lesson-example]
-for instructions on formatting, building, and submitting material,
-or run `make` in this directory for a list of helpful commands.
+Version control with Git for research code, from first commit to collaborating on GitHub. Adapted from Software Carpentry for Pomona College.
 
-Maintainers:
+**Lesson site:** <https://pomona-college.github.io/hpc-git-novice/>
 
-- [Nima Hejazi][hejazi_nima]: [@nhejazi](https://github.com/nhejazi)
-- [Kat Koziar][koziar_kat]: [@kekoziar](https://github.com/kekoziar)
-- [Madicken Munk][munk_madicken]: [@munkm](https://github.com/munkm)
+## About this lesson
 
-Alumni maintainers:
+This is Pomona College's adaptation of the Software Carpentry lesson
+[Version Control with Git](https://swcarpentry.github.io/git-novice/), reworked for researchers and
+students using the **Sagehen** HPC cluster. Alongside the original material it
+covers how the work is done here: launching sessions through the OnDemand
+portal, where data and results belong on Sagehen's storage tiers, and when to
+move an analysis from an interactive session into a submitted job.
 
-- [Ivan Gonzalez][gonzalez_ivan]: [@iglpdc](https://github.com/iglpdc)
-- [Daisie Huang][huang_daisie]: [@daisieh](https://github.com/daisieh)
+It is one of 23 workshops in the Pomona College HPC Workshop Series, maintained
+by ITS Research Computing.
 
-[lesson-example]: https://swcarpentry.github.io/lesson-example
-[hejazi_nima]: https://carpentries.org/instructors/#nhejazi
-[koziar_kat]: https://carpentries.org/instructors/#kekoziar
-[munk_madicken]: https://carpentries.org/instructors/#munkm
-[gonzalez_ivan]: https://carpentries.org/instructors/#iglpdc
-[huang_daisie]: https://software-carpentry.org/team/#huang_daisie
+## Getting started
 
+You do not need to install anything locally. Sign in to the OnDemand portal at
+<https://ondemand.hpc.pomona.edu/> with your Pomona credentials and DUO, and
+launch an interactive session from there. Full instructions, including the
+local-install alternative, are on the lesson's **Setup** page.
 
+You will need a Sagehen account. If you do not have one, contact
+<its-hpc@pomona.edu>.
 
+## Attribution
+
+Adapted from [swcarpentry/git-novice](https://github.com/swcarpentry/git-novice) by
+[Software Carpentry](https://software-carpentry.org/), used under
+[CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/). Pomona College
+modifications are also released under CC-BY 4.0.
+
+The original lesson is maintained by Nima Hejazi, Kat Koziar and Madicken Munk, with contributions from many others. Please cite the original lesson as set out in `CITATION`.
+
+"The Carpentries", "Software Carpentry" and their logos are registered
+trademarks of [Community Initiatives](https://communityin.org/). This adaptation
+is not an official Software Carpentry lesson and is not endorsed by The
+Carpentries.
+
+## Contributing
+
+Corrections and improvements are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+In short: Sagehen-specific changes belong here, while improvements to the
+underlying lesson are better sent upstream to
+[swcarpentry/git-novice](https://github.com/swcarpentry/git-novice) so the wider community
+benefits.
+
+All contributors are expected to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
+
+## Licence
+
+See [LICENSE.md](LICENSE.md). Instructional material is CC-BY 4.0; example code
+is MIT.
+
+## Contact
+
+Pomona College ITS Research Computing — <its-hpc@pomona.edu>
