@@ -71,7 +71,10 @@ In this lesson we use Git from the Unix Shell.
 Some previous experience with the shell is expected,
 *but isn't mandatory*.
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Acknowledgments
 
+Developed by **Andrew Wilson**, Director of Research Computing and Digital
+Scholarship at Pomona College, with **Andrei Motchenko**, who tested, edited
+and produced screenshots for the workshop series.
