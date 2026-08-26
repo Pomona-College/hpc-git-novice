@@ -10,7 +10,7 @@ Version control with Git for research code, from first commit to collaborating o
 
 This is Pomona College's adaptation of the Software Carpentry lesson
 [Version Control with Git](https://swcarpentry.github.io/git-novice/), reworked for researchers and
-students using the **Sagehen** HPC cluster. Alongside the original material it
+students using the **Sagehen HPC** HPC cluster. Alongside the original material it
 covers how the work is done here: launching sessions through the OnDemand
 portal, where data and results belong on Sagehen's storage tiers, and when to
 move an analysis from an interactive session into a submitted job.
