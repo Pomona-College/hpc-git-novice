@@ -93,7 +93,7 @@ If so, who?
 
 There is no universal rule, so use this short triage:
 
-1. **Check the data classification.** PUBLIC data (the green tier in the Sagehen security training) is fine for public repositories. PROPRIETARY (lab-internal) and RESTRICTED (FERPA, HIPAA, ITAR/EAR) data must never be pushed to GitHub, GitLab, or any third-party service.
+1. **Check the data classification.** PUBLIC data (the green tier in the Sagehen HPC security training) is fine for public repositories. PROPRIETARY (lab-internal) and RESTRICTED (FERPA, HIPAA, ITAR/EAR) data must never be pushed to GitHub, GitLab, or any third-party service.
 2. **Check the funding source.** Some federal grants have publication or embargo clauses; corporate-funded work usually requires sign-off from the sponsor.
 3. **Check your PI.** For student or research-staff work, the faculty PI is the gatekeeper. Their written agreement (an email is enough) is the cheapest insurance you can buy before clicking "Make repository public".
 4. **Check Pomona ITS.** For anything involving regulated data, contact its-hpc@pomona.edu before opening the repo. ITS may require the work live on Sagehen with controlled access rather than on a public host.

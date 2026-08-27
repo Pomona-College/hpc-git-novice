@@ -15,14 +15,14 @@ by [Software Carpentry](https://software-carpentry.org/).
 - **Support:** its-hpc@pomona.edu
 
 Version control is essential for reproducible research on HPC systems.
-All examples can be practiced on the Sagehen cluster.
+All examples can be practiced on the Sagehen HPC cluster.
 
 *Adapted for Pomona College by Andrew Wilson, ITS Research Computing.
 Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-Cecil and Frary have been hired by Sagehen Space Lab (a research
+Cecil and Frary have been hired by Sagehen HPC Space Lab (a research
 group at Pomona College) to investigate if it
 is possible to send their next planetary lander to Mars.  They want to
 be able to work on the plans at the same time, but they have run into

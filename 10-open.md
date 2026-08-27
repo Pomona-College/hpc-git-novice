@@ -189,7 +189,7 @@ When a colleague runs `git clone`, they pull the lightweight repository as usual
 
 Two things to watch for at Pomona:
 
-1. **Storage quota** — GitHub's free LFS quota is 1 GB storage and 1 GB/month bandwidth per account. For larger genomics or imaging datasets, prefer Sagehen storage (`/bigdata/lab/<labname>`) plus a small GitHub repo with code and metadata.
+1. **Storage quota** — GitHub's free LFS quota is 1 GB storage and 1 GB/month bandwidth per account. For larger genomics or imaging datasets, prefer Sagehen HPC storage (`/bigdata/lab/<labname>`) plus a small GitHub repo with code and metadata.
 2. **Sensitive data** — never push restricted data to a public LFS-backed repository. The encryption pattern from the Sagehen Security Awareness modules (gocryptfs on `/bigdata`) is the right tool for those files.
 
 :::::::::::::::::::::::::
